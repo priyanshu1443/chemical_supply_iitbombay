@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 237, 233);
+}
+
+header h1 {
+    text-align: center;
+    padding-block: 10px;
+}
+
+main {
+    padding-block: 10px;
+    padding-inline: 10px;
+    position: relative;
+}
+
+main>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+main>div>ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+main>div>ul>li:hover {
+    cursor: pointer;
+}
+
+
+main>section:nth-child(2) {
+    overflow-x: auto;
+}
+
+table {
+    margin: auto;
+}
+
+table thead tr {
+    background-color: #FFEC9E;
+}
+
+table th,
+table td {
+    padding-block: 10px;
+}
+
+table th {
+    cursor: pointer;
+}
+
+.s1 {
+    width: 80px;
+    text-align: center;
+}
+
+
+.s2 {
+    width: 30px;
+    height: auto;
+}
+
+.s3 {
+    width: 50px;
+    text-align: center;
+}
+
+.s4 {
+    width: 220px;
+    text-align: center;
+}
+
+.s5 {
+    width: 120px;
+    text-align: center;
+}
+
+
+#addItem {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(240, 237, 233, 0.847);
+}
+
+#addItem>section {
+    display: inline-block;
+    padding-inline: 50px;
+    padding-block: 50px;
+}
+
+#addItem h1 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#addItem div {
+    padding-block: 5px;
+}
+
+#addItem div label {
+    font-size: 18px;
+}
+
+#addItem>section div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#addItem>section div:last-child button {
+    padding-inline: 10px;
+    padding-block: 3px;
+    cursor: pointer;
+}

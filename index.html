@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Supplies</title>
+    <script src="https://kit.fontawesome.com/cbc573eb6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Chemical Supplies</h1>
+    </header>
+    <main id="main">
+        <div>
+            <ul>
+                <li>
+                    <i onclick="createItem()" class="fa-solid fa-plus " style="color: rgb(0, 0, 0);"></i>
+                </li>
+                <li>
+                    <i onclick="EditData()" class="fa-solid fa-pen-to-square" style="color: blue;"></i>
+                </li>
+                <li>
+                    <i onclick="goDown()" class="fa-solid fa-arrow-down" style="color: blue;"></i>
+                </li>
+                <li>
+                    <i onclick="goUp()" class="fa-solid fa-arrow-up" style="color: blue;"></i>
+                </li>
+                <li>
+                    <i id="delete" class="fa-solid fa-trash" style="color: red;"></i>
+                </li>
+                <li>
+                    <i id="refresh" class="fa-solid fa-rotate" style="color: blue;"></i>
+                </li>
+                <li>
+                    <i onclick="saveData()" class="fa-solid fa-floppy-disk" style="color: blue;"></i>
+                </li>
+            </ul>
+        </div>
+        <section>
+            <table border="1" cellspacing="0px">
+                <thead>
+                    <tr>
+                        <th class="s2">
+                            <input onclick="selectAll()" type="checkbox" name="" id="all">
+                        </th>
+                        <th class="s3" id="sno">S.No.</th>
+                        <th class="s4" id="chemicalName">Chemical Name</th>
+                        <th class="s5" id="vendor">Vendor</th>
+                        <th class="s1" id="density">Density</th>
+                        <th class="s1" id="viscosity">Viscosity</th>
+                        <th class="s1" id="packaging">Packaging</th>
+                        <th class="s1" id="packSize">Pack Size</th>
+                        <th class="s3" id="unit">Unit</th>
+                        <th class="s1" id="quantity">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="data_container">
+                    <template id="list_template">
+                        <tr>
+                            <td class="checkbox s2" align="center">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                            <td class="sno s3"></td>
+                            <td class="chemicalName s4"></td>
+                            <td class="vendor s5"></td>
+                            <td class="density s1"></td>
+                            <td class="viscosity s1"></td>
+                            <td class="packaging s1"></td>
+                            <td class="packSize s1"></td>
+                            <td class="unit s3"></td>
+                            <td class="quantity s1"></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </section>
+        <section id="addItem">
+            <section>
+                <h1 id="addItemHeading">Add item</h1>
+                <div>
+                    <label for="chemicalNameNew">Chemical Name</label>
+                    <br>
+                    <input type="text" id="chemicalNameNew">
+                </div>
+                <div>
+                    <label for="venderNew">vender</label><br>
+                    <input type="text" name="" id="venderNew">
+                </div>
+                <div>
+                    <label for="densityNew">Density</label><br>
+                    <input type="number" name="" id="densityNew">
+                </div>
+                <div>
+                    <label for="viscosityNew">Viscosity</label><br>
+                    <input type="number" name="" id="viscosityNew">
+                </div>
+                <div>
+                    <label for="packagingNew">Packaging</label><br>
+                    <input type="text" name="" id="packagingNew">
+                </div>
+                <div>
+                    <label for="packSizeNew">Pack Size</label><br>
+                    <input type="number" name="" id="packSizeNew">
+                </div>
+                <div>
+                    <label for="unitNew">Unit</label><br>
+                    <input type="text" name="" id="unitNew">
+                </div>
+                <div>
+                    <label for="quantityNew">Quantity</label><br>
+                    <input type="number" name="" id="quantityNew">
+                </div>
+                <div>
+                    <button onclick="saveItem()" id="saveItem">Add item</button>
+                    <button onclick="cancleSave()" id="cancleSaveItem">Cancle</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
